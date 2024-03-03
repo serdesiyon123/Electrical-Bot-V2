@@ -106,7 +106,6 @@ def second_year_second_sem_modules_menu(message):
     mybot.send_message(message.chat.id, ">>>", reply_markup=b2s2.view_second_sem_menu)
 
 
-
 # third year
 @mybot.message_handler(func=lambda message: message.text == third_year)
 def third_year_menu(message):
@@ -785,89 +784,160 @@ back_button_handlers = ({
                                                     reply_markup=view_menu),
     fifth_year: lambda message: mybot.send_message(message.chat.id, "Which year resource are you looking for?",
                                                    reply_markup=view_menu),
-    b2s2.second_semester: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b2s2.view_Second_year_Menu),
-    b2s2.fundamentals_ee: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b2s2.view_second_sem_menu),
-    b2s2.applied: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b2s2.view_second_sem_menu),
-    b2s2.dynamics: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b2s2.view_second_sem_menu),
-    b2s2.thermodynamics: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b2s2.view_second_sem_menu),
-    b2s2.probability: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b2s2.view_second_sem_menu),
-    b2s2.history: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b2s2.view_second_sem_menu),
-    b2s2.contribute: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b2s2.view_Second_year_Menu),
+    b2s2.second_semester: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                             reply_markup=b2s2.view_Second_year_Menu),
+    b2s2.fundamentals_ee: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                             reply_markup=b2s2.view_Second_sem_subjects),
+    b2s2.applied: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                     reply_markup=b2s2.view_Second_sem_subjects),
+    b2s2.dynamics: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                      reply_markup=b2s2.view_Second_sem_subjects),
+    b2s2.thermodynamics: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                            reply_markup=b2s2.view_Second_sem_subjects),
+    b2s2.probability: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                         reply_markup=b2s2.view_Second_sem_subjects),
+    b2s2.history: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                     reply_markup=b2s2.view_Second_sem_subjects),
+    b2s2.contribute: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                        reply_markup=b2s2.view_Second_year_Menu),
     third_year: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=view_menu),
-    b3s1.first_semester: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b3s1.view_Third_year_Menu),
-    b3s1.apply_electronics: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b3s1.view_first_sem_subjects),
-    b3s1.computational_methods: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b3s1.view_first_sem_subjects),
-    b3s1.signals_systems: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b3s1.view_first_sem_subjects),
-    b3s1.electromagnetic_fields: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b3s1.view_first_sem_subjects),
-    b3s1.oop_java: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b3s1.view_first_sem_subjects),
-    b3s1.research_methods: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b3s1.view_first_sem_subjects),
-    b3s1.second_semester: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b3s1.view_Third_year_Menu),
-    b3s2.applied_electronics: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b3s2.view_Second_sem_subjects),
-    b3s2.logic_design: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b3s2.view_Second_sem_subjects),
-    b3s2.signal_processing: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b3s2.view_Second_sem_subjects),
-    b3s2.network_analysis: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b3s2.view_Second_sem_subjects),
-    b3s2.electrical_machines: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b3s2.view_Second_sem_subjects),
+    b3s1.first_semester: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                            reply_markup=b3s1.view_Third_year_Menu),
+    b3s1.apply_electronics: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                               reply_markup=b3s1.view_first_sem_subjects),
+    b3s1.computational_methods: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                   reply_markup=b3s1.view_first_sem_subjects),
+    b3s1.signals_systems: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                             reply_markup=b3s1.view_first_sem_subjects),
+    b3s1.electromagnetic_fields: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                    reply_markup=b3s1.view_first_sem_subjects),
+    b3s1.oop_java: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                      reply_markup=b3s1.view_first_sem_subjects),
+    b3s1.research_methods: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                              reply_markup=b3s1.view_first_sem_subjects),
+    b3s1.second_semester: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                             reply_markup=b3s1.view_Third_year_Menu),
+    b3s2.applied_electronics: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                 reply_markup=b3s2.view_Second_sem_subjects),
+    b3s2.logic_design: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                          reply_markup=b3s2.view_Second_sem_subjects),
+    b3s2.signal_processing: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                               reply_markup=b3s2.view_Second_sem_subjects),
+    b3s2.network_analysis: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                              reply_markup=b3s2.view_Second_sem_subjects),
+    b3s2.electrical_machines: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                 reply_markup=b3s2.view_Second_sem_subjects),
     fourth_year: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=view_menu),
     b4s1.first_sem: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s1.view_fourth_year_Menu),
-    b4s1.communication_systems: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s1.view_fourth_first_subjects),
-    b4s1.computer_architecture: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s1.view_fourth_first_subjects),
-    b4s1.control_systems: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s1.view_fourth_first_subjects),
-    b4s1.electrical_measurement: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s1.view_fourth_first_subjects),
-    b4s1.power_systems: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s1.view_fourth_first_subjects),
-    b4s1.special: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s1.view_fourth_first_subjects),
-    b4s1.communication_engineering: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s1.view_fourth_year_Menu),
-    b4s2.microprocessors: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_commu_menu),
-    b4s2.digital_communications: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_commu_menu),
+    b4s1.communication_systems: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                   reply_markup=b4s1.view_fourth_first_subjects),
+    b4s1.computer_architecture: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                   reply_markup=b4s1.view_fourth_first_subjects),
+    b4s1.control_systems: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                             reply_markup=b4s1.view_fourth_first_subjects),
+    b4s1.electrical_measurement: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                    reply_markup=b4s1.view_fourth_first_subjects),
+    b4s1.power_systems: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                           reply_markup=b4s1.view_fourth_first_subjects),
+    b4s1.special: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                     reply_markup=b4s1.view_fourth_first_subjects),
+    b4s1.communication_engineering: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                       reply_markup=b4s1.view_fourth_year_Menu),
+    b4s2.microprocessors: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                             reply_markup=b4s2.view_fourth_commu_menu),
+    b4s2.digital_communications: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                    reply_markup=b4s2.view_fourth_commu_menu),
     b4s2.EM_waves: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_commu_menu),
-    b4s2.data_communication: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_commu_menu),
-    b4s1.computer_engineering: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s1.view_fourth_year_Menu),
-    b4s2.microprocessors: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_computer_menu),
+    b4s2.data_communication: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                reply_markup=b4s2.view_fourth_commu_menu),
+    b4s1.computer_engineering: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                  reply_markup=b4s1.view_fourth_year_Menu),
+    b4s2.microprocessors: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                             reply_markup=b4s2.view_fourth_computer_menu),
     b4s2.dsa: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_computer_menu),
-    b4s2.database: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_computer_menu),
-    b4s2.data_communication: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_computer_menu),
-    b4s1.control_engineering: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s1.view_fourth_year_Menu),
-    b4s2.modern_control: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_control_menu),
-    b4s2.electrical_machines2: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_control_menu),
+    b4s2.database: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                      reply_markup=b4s2.view_fourth_computer_menu),
+    b4s2.data_communication: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                reply_markup=b4s2.view_fourth_computer_menu),
+    b4s1.control_engineering: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                 reply_markup=b4s1.view_fourth_year_Menu),
+    b4s2.modern_control: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                            reply_markup=b4s2.view_fourth_control_menu),
+    b4s2.electrical_machines2: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                  reply_markup=b4s2.view_fourth_control_menu),
 })
 back_button_handlers.update({
-    b4s2.process_control: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_control_menu),
-    b4s2.microprocessors: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_control_menu),
-    b4s1.electronics_engineering: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s1.view_fourth_year_Menu),
-    b4s2.digital_communications: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_electronics_menu),
-    b4s2.EM_waves: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_electronics_menu),
-    b4s2.microprocessors: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_electronics_menu),
-    b4s2.power_electronics: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_electronics_menu),
-    b4s1.power_engineering: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s1.view_fourth_year_Menu),
-    b4s2.modern_control: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_power_menu),
-    b4s2.electrical_machines2: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_power_menu),
-    b4s2.power_systems2: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_power_menu),
-    b4s2.microprocessors: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fourth_power_menu),
-    b4s2.communication_engineering: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fifth_year_menu),
+    b4s2.process_control: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                             reply_markup=b4s2.view_fourth_control_menu),
+    b4s2.microprocessors: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                             reply_markup=b4s2.view_fourth_control_menu),
+    b4s1.electronics_engineering: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                     reply_markup=b4s1.view_fourth_year_Menu),
+    b4s2.digital_communications: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                    reply_markup=b4s2.view_fourth_electronics_menu),
+    b4s2.EM_waves: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                      reply_markup=b4s2.view_fourth_electronics_menu),
+    b4s2.microprocessors: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                             reply_markup=b4s2.view_fourth_electronics_menu),
+    b4s2.power_electronics: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                               reply_markup=b4s2.view_fourth_electronics_menu),
+    b4s1.power_engineering: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                               reply_markup=b4s1.view_fourth_year_Menu),
+    b4s2.modern_control: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                            reply_markup=b4s2.view_fourth_power_menu),
+    b4s2.electrical_machines2: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                  reply_markup=b4s2.view_fourth_power_menu),
+    b4s2.power_systems2: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                            reply_markup=b4s2.view_fourth_power_menu),
+    b4s2.microprocessors: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                             reply_markup=b4s2.view_fourth_power_menu),
+    b4s2.communication_engineering: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                       reply_markup=b4s2.view_fifth_year_menu),
     cm5.first_sem: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=cm5.view_fifth_commu_menu),
-    cm5.modules: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=cm5.view_fifth_1st_sem_commu_menu),
+    cm5.modules: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                    reply_markup=cm5.view_fifth_1st_sem_commu_menu),
     cm5.second_sem: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=cm5.view_fifth_commu_menu),
-    cm5.modules2: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=cm5.view_fifth_2nd_sem_commu_menu),
-    b4s2.computer_engineering: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fifth_year_menu),
-    cp5.first_sem: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=cp5.view_fifth_computer_menu),
-    cp5.modules: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=cp5.view_fifth_1st_sem_computer_menu),
-    cp5.second_sem: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=cp5.view_fifth_computer_menu),
-    cp5.modules2: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=cp5.view_fifth_2nd_sem_computer_menu),
-    b4s2.control_engineering: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fifth_year_menu),
+    cm5.modules2: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                     reply_markup=cm5.view_fifth_2nd_sem_commu_menu),
+    b4s2.computer_engineering: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                  reply_markup=b4s2.view_fifth_year_menu),
+    cp5.first_sem: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                      reply_markup=cp5.view_fifth_computer_menu),
+    cp5.modules: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                    reply_markup=cp5.view_fifth_1st_sem_computer_menu),
+    cp5.second_sem: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                       reply_markup=cp5.view_fifth_computer_menu),
+    cp5.modules2: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                     reply_markup=cp5.view_fifth_2nd_sem_computer_menu),
+    b4s2.control_engineering: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                 reply_markup=b4s2.view_fifth_year_menu),
     ct5.first_sem: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=ct5.view_fifth_control_menu),
-    ct5.modules: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=ct5.view_fifth_1st_sem_control_menu),
-    ct5.second_sem: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=ct5.view_fifth_control_menu),
-    ct5.modules2: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=ct5.view_fifth_2nd_sem_control_menu),
-    b4s2.electronics_engineering: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fifth_year_menu),
-    e5.first_sem: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=e5.view_fifth_electronics_menu),
-    e5.modules: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=e5.view_fifth_1st_sem_electronics_menu),
-    e5.second_sem: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=e5.view_fifth_electronics_menu),
-    e5.modules2: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=e5.view_fifth_2nd_sem_electronics_menu),
-    b4s2.power_engineering: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=b4s2.view_fifth_year_menu),
+    ct5.modules: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                    reply_markup=ct5.view_fifth_1st_sem_control_menu),
+    ct5.second_sem: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                       reply_markup=ct5.view_fifth_control_menu),
+    ct5.modules2: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                     reply_markup=ct5.view_fifth_2nd_sem_control_menu),
+    b4s2.electronics_engineering: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                                     reply_markup=b4s2.view_fifth_year_menu),
+    e5.first_sem: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                     reply_markup=e5.view_fifth_electronics_menu),
+    e5.modules: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                   reply_markup=e5.view_fifth_1st_sem_electronics_menu),
+    e5.second_sem: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                      reply_markup=e5.view_fifth_electronics_menu),
+    e5.modules2: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                    reply_markup=e5.view_fifth_2nd_sem_electronics_menu),
+    b4s2.power_engineering: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                               reply_markup=b4s2.view_fifth_year_menu),
     p5.first_sem: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=p5.view_fifth_power_menu),
-    p5.modules: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=p5.view_fifth_1st_sem_power_menu),
+    p5.modules: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                   reply_markup=p5.view_fifth_1st_sem_power_menu),
     p5.second_sem: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=p5.view_fifth_power_menu),
-    p5.modules2: lambda message: mybot.send_message(message.chat.id, "<<<", reply_markup=p5.view_fifth_2nd_sem_power_menu),
+    p5.modules2: lambda message: mybot.send_message(message.chat.id, "<<<",
+                                                    reply_markup=p5.view_fifth_2nd_sem_power_menu),
 })
+
 
 @mybot.message_handler(func=lambda message: message.text == back)
 def handle_back(message):
@@ -900,7 +970,6 @@ def handle_back(message):
             back_button_handlers[current_state](message)
             # Update the user_state when back button is pressed
             append_state(message.chat.id, current_state)
-
 
 
 # Handler for "Modules and Guides" button of second year
@@ -944,6 +1013,7 @@ def handle_modules_and_guides(message):
     else:
         mybot.send_message(chat_id, "Please select a subject first.")
 
+
 # Handler for "Worksheets and Exams" button of second year
 @mybot.message_handler(func=lambda message: message.text == b2s2.ppts)
 def handle_worksheets_and_exams(message):
@@ -951,24 +1021,65 @@ def handle_worksheets_and_exams(message):
     current_state = user_state.get(chat_id)[-1] if len(user_state.get(chat_id)) > 0 else None
 
     if current_state == b2s2.fundamentals_ee:
-        mybot.send_message(chat_id, "You are in the Fundamentals of EE subject.")
+        mybot.send_message(chat_id, "Fundamentals of EE Exams.")
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=93, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=94, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=95, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=96, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=97, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=98, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=100, message_thread_id=True)
+
+
     elif current_state == b2s2.applied:
         mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=39)
-        mybot.send_message(chat_id, "You are in the Applied III subject.")
+        mybot.send_message(chat_id, "Applied III Exams.")
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=40, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=41, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=42, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=43, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=44, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=45, message_thread_id=True)
+
     elif current_state == b2s2.dynamics:
-        mybot.send_message(chat_id, "You are in the Dynamics subject.")
+        mybot.send_message(chat_id, "Dynamics Exams.")
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=49, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=50, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=51, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=52, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=53, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=54, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=55, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=56, message_thread_id=True)
+
     elif current_state == b2s2.thermodynamics:
-        mybot.send_message(chat_id, "You are in the Thermodynamics subject.")
+        mybot.send_message(chat_id, "Thermodynamics Exams.")
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=80, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=81, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=82, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=83, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=84, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=85, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=86, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=87, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=88, message_thread_id=True)
+
     elif current_state == b2s2.probability:
-        mybot.send_message(chat_id, "You are in the Probability subject.")
+        mybot.send_message(chat_id, "Probability Exams.")
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=102, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=103, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=104, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=105, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=106, message_thread_id=True)
+
     elif current_state == b2s2.history:
-        mybot.send_message(chat_id, "You are in the History subject.")
+        mybot.send_message(chat_id, "History Exams.")
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=89, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=90, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=91, message_thread_id=True)
+
     else:
         mybot.send_message(chat_id, "Please select a subject first.")
-
-
-
-
 
 
 # Handler for "Modules and Guides" button of third year first semester
@@ -978,19 +1089,68 @@ def handle_modules_and_guides(message):
     current_state = user_state.get(chat_id)[-1] if len(user_state.get(chat_id)) > 0 else None
 
     if current_state == b3s1.apply_electronics:
-        mybot.send_message(chat_id, "You are in the Applied Electronics subject.")
+        mybot.send_message(chat_id, "Applied Electronics I Books.")
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=112, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=113, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=114, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=115, message_thread_id=True)
+
+
     elif current_state == b3s1.computational_methods:
-        mybot.send_message(chat_id, "You are in the Computational Methods subject.")
+        mybot.send_message(chat_id, "Computational Methods Books.")
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=146, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=147, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=148, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=149, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=154, message_thread_id=True)
+
     elif current_state == b3s1.signals_systems:
-        mybot.send_message(chat_id, "You are in the Signals and Systems subject.")
+        mybot.send_message(chat_id, "Signals and Systems Books.")
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=163, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=164, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=165, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=166, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=167, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=168, message_thread_id=True)
+
     elif current_state == b3s1.electromagnetic_fields:
-        mybot.send_message(chat_id, "You are in the Electromagnetic Fields subject.")
+        mybot.send_message(chat_id, "Electromagnetic Fields books.")
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=120, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=121, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=122, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=123, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=124, message_thread_id=True)
     elif current_state == b3s1.oop_java:
-        mybot.send_message(chat_id, "You are in the OOP Java subject.")
+        mybot.send_message(chat_id, "OOP(Java) Books.")
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=127, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=128, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=129, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=130, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=131, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=132, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=133, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=134, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=135, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=136, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=137, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=138, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=139, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=140, message_thread_id=True)
+
+
     elif current_state == b3s1.research_methods:
-        mybot.send_message(chat_id, "You are in the Research Methods subject.")
+        mybot.send_message(chat_id, "Research Methods Books.")
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=171, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=172, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=173, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=174, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=175, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=176, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=177, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=178, message_thread_id=True)
     else:
         mybot.send_message(chat_id, "Please select a subject first.")
+
 
 # Handler for "Worksheets and Exams" button of third year first semester
 @mybot.message_handler(func=lambda message: message.text == b3s1.ppts)
@@ -999,23 +1159,38 @@ def handle_worksheets_and_exams(message):
     current_state = user_state.get(chat_id)[-1] if len(user_state.get(chat_id)) > 0 else None
 
     if current_state == b3s1.apply_electronics:
-        mybot.send_message(chat_id, "You are in the Applied Electronics subject.")
+        mybot.send_message(chat_id, "Applied Electronics I Exams.")
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=116, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=117, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=118, message_thread_id=True)
+
     elif current_state == b3s1.computational_methods:
-        mybot.send_message(chat_id, "You are in the Computational Methods subject.")
+        mybot.send_message(chat_id, "Computational Methods Exams.")
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=155, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=156, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=157, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=158, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=159, message_thread_id=True)
     elif current_state == b3s1.signals_systems:
-        mybot.send_message(chat_id, "You are in the Signals and Systems subject.")
+        mybot.send_message(chat_id, "Signals and Systems Exams.")
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=169, message_thread_id=True)
     elif current_state == b3s1.electromagnetic_fields:
-        mybot.send_message(chat_id, "You are in the Electromagnetic Fields subject.")
+        mybot.send_message(chat_id, "Electromagnetic Fields Exams.")
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=125, message_thread_id=True)
+
     elif current_state == b3s1.oop_java:
-        mybot.send_message(chat_id, "You are in the OOP Java subject.")
+        mybot.send_message(chat_id, "OOP(Java) Exams.")
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=141, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=142, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=143, message_thread_id=True)
+        mybot.forward_message(chat_id=message.chat.id, from_chat_id=CHANNEL_ID, message_id=144, message_thread_id=True)
+
     elif current_state == b3s1.research_methods:
-        mybot.send_message(chat_id, "You are in the Research Methods subject.")
+        mybot.send_message(chat_id, "Research Methods Exams.")
     else:
         mybot.send_message(chat_id, "Please select a subject first.")
 
-
-
-
+empty = "It's empty at moment.\n please send us anything that might be helpful for this course.\n Thank you"
 # Handler for "Modules and Guides" button of third year second semester
 @mybot.message_handler(func=lambda message: message.text == b3s2.modules)
 def handle_modules_and_guides(message):
@@ -1023,17 +1198,18 @@ def handle_modules_and_guides(message):
     current_state = user_state.get(chat_id)[-1] if len(user_state.get(chat_id)) > 0 else None
 
     if current_state == b3s2.applied_electronics:
-        mybot.send_message(chat_id, "You are in the Applied Electronics subject.")
+        mybot.send_message(chat_id, f"Applied Electronics {empty}")
     elif current_state == b3s2.logic_design:
-        mybot.send_message(chat_id, "You are in the Logic Design subject.")
+        mybot.send_message(chat_id, f"Logic Design {empty}")
     elif current_state == b3s2.signal_processing:
-        mybot.send_message(chat_id, "You are in the Signal Processing subject.")
+        mybot.send_message(chat_id, f"Signal Processing {empty}")
     elif current_state == b3s2.network_analysis:
-        mybot.send_message(chat_id, "You are in the Network Analysis subject.")
+        mybot.send_message(chat_id, f"Network Analysis {empty}")
     elif current_state == b3s2.electrical_machines:
-        mybot.send_message(chat_id, "You are in the Electrical Machines subject.")
+        mybot.send_message(chat_id, f"Electrical Machines {empty}")
     else:
         mybot.send_message(chat_id, "Please select a subject first.")
+
 
 # Handler for "Worksheets and Exams" button of third year second semester
 @mybot.message_handler(func=lambda message: message.text == b3s2.ppts)
@@ -1042,19 +1218,17 @@ def handle_worksheets_and_exams(message):
     current_state = user_state.get(chat_id)[-1] if len(user_state.get(chat_id)) > 0 else None
 
     if current_state == b3s2.applied_electronics:
-        mybot.send_message(chat_id, "You are in the Applied Electronics subject.")
+        mybot.send_message(chat_id, f"Applied Electronics {empty}")
     elif current_state == b3s2.logic_design:
-        mybot.send_message(chat_id, "You are in the Logic Design subject.")
+        mybot.send_message(chat_id, f"Logic Design {empty}")
     elif current_state == b3s2.signal_processing:
-        mybot.send_message(chat_id, "You are in the Signal Processing subject.")
+        mybot.send_message(chat_id, f"Signal Processing {empty}")
     elif current_state == b3s2.network_analysis:
-        mybot.send_message(chat_id, "You are in the Network Analysis subject.")
+        mybot.send_message(chat_id, f"Network Analysis {empty}")
     elif current_state == b3s2.electrical_machines:
-        mybot.send_message(chat_id, "You are in the Electrical Machines subject.")
+        mybot.send_message(chat_id, f"Electrical Machines {empty}")
     else:
         mybot.send_message(chat_id, "Please select a subject first.")
-
-
 
 
 # Handler for "Modules and Guides" button of fourth year first semester
@@ -1064,17 +1238,18 @@ def handle_modules_and_guides(message):
     current_state = user_state.get(chat_id)[-1] if len(user_state.get(chat_id)) > 0 else None
 
     if current_state == b4s1.communication_systems:
-        mybot.send_message(chat_id, "You are in the Communication Systems subject.")
+        mybot.send_message(chat_id, f"Communication Systems {empty}")
     elif current_state == b4s1.computer_architecture:
-        mybot.send_message(chat_id, "You are in the Computer Architecture subject.")
+        mybot.send_message(chat_id, f"Computer Architecture {empty}")
     elif current_state == b4s1.control_systems:
-        mybot.send_message(chat_id, "You are in the Control Systems subject.")
+        mybot.send_message(chat_id, f"Control Systems {empty}")
     elif current_state == b4s1.electrical_measurement:
-        mybot.send_message(chat_id, "You are in the Electrical Measurement subject.")
+        mybot.send_message(chat_id, f"Electrical Measurement {empty}")
     elif current_state == b4s1.power_systems:
-        mybot.send_message(chat_id, "You are in the Power Systems subject.")
+        mybot.send_message(chat_id, f"Power Systems {empty}")
     else:
         mybot.send_message(chat_id, "Please select a subject first.")
+
 
 # Handler for "Worksheets and Exams" button of fourth year first semester
 @mybot.message_handler(func=lambda message: message.text == b4s1.ppts)
@@ -1083,15 +1258,15 @@ def handle_worksheets_and_exams(message):
     current_state = user_state.get(chat_id)[-1] if len(user_state.get(chat_id)) > 0 else None
 
     if current_state == b4s1.communication_systems:
-        mybot.send_message(chat_id, "You are in the Communication Systems subject.")
+        mybot.send_message(chat_id, f"Communication Systems {empty}")
     elif current_state == b4s1.computer_architecture:
-        mybot.send_message(chat_id, "You are in the Computer Architecture subject.")
+        mybot.send_message(chat_id, f"Computer Architecture {empty}")
     elif current_state == b4s1.control_systems:
-        mybot.send_message(chat_id, "You are in the Control Systems subject.")
+        mybot.send_message(chat_id, f"Control Systems {empty}")
     elif current_state == b4s1.electrical_measurement:
-        mybot.send_message(chat_id, "You are in the Electrical Measurement subject.")
+        mybot.send_message(chat_id, f"Electrical Measurement {empty}")
     elif current_state == b4s1.power_systems:
-        mybot.send_message(chat_id, "You are in the Power Systems subject.")
+        mybot.send_message(chat_id, f"Power Systems {empty}")
     else:
         mybot.send_message(chat_id, "Please select a subject first.")
 
@@ -1146,6 +1321,7 @@ def handle_worksheets_and_exams(message):
 def handle_contribute(message):
     mybot.send_message(message.chat.id, "Please send the file (pdf, doc, ppt) or link you want to contribute.")
 
+
 # Handler for documents
 @mybot.message_handler(content_types=['document'])
 def handle_document(message):
@@ -1155,18 +1331,21 @@ def handle_document(message):
     if file_extension in ['.pdf', '.doc', '.ppt', '.docx', '.pptx']:
         mybot.forward_message(chat_id=CONTRIBUTE, from_chat_id=message.chat.id, message_id=message.message_id)
 
+
 # Handler for links
 @mybot.message_handler(func=lambda message: message.entities is not None)
 def handle_links(message):
     for entity in message.entities:
         if entity.type == "url":
             mybot.forward_message(chat_id=CONTRIBUTE, from_chat_id=message.chat.id, message_id=message.message_id)
+
 
 # Handler for "Contribute" button for third year
 @mybot.message_handler(func=lambda message: message.text == b3s1.contribute)
 def handle_contribute(message):
     mybot.send_message(message.chat.id, "Please send the file (pdf, doc, ppt) or link you want to contribute.")
 
+
 # Handler for documents
 @mybot.message_handler(content_types=['document'])
 def handle_document(message):
@@ -1176,18 +1355,21 @@ def handle_document(message):
     if file_extension in ['.pdf', '.doc', '.ppt', '.docx', '.pptx']:
         mybot.forward_message(chat_id=CONTRIBUTE, from_chat_id=message.chat.id, message_id=message.message_id)
 
+
 # Handler for links
 @mybot.message_handler(func=lambda message: message.entities is not None)
 def handle_links(message):
     for entity in message.entities:
         if entity.type == "url":
             mybot.forward_message(chat_id=CONTRIBUTE, from_chat_id=message.chat.id, message_id=message.message_id)
+
 
 # Handler for "Contribute" button for fourth year
 @mybot.message_handler(func=lambda message: message.text == b4s1.contribute)
 def handle_contribute(message):
     mybot.send_message(message.chat.id, "Please send the file (pdf, doc, ppt) or link you want to contribute.")
 
+
 # Handler for documents
 @mybot.message_handler(content_types=['document'])
 def handle_document(message):
@@ -1197,18 +1379,21 @@ def handle_document(message):
     if file_extension in ['.pdf', '.doc', '.ppt', '.docx', '.pptx']:
         mybot.forward_message(chat_id=CONTRIBUTE, from_chat_id=message.chat.id, message_id=message.message_id)
 
+
 # Handler for links
 @mybot.message_handler(func=lambda message: message.entities is not None)
 def handle_links(message):
     for entity in message.entities:
         if entity.type == "url":
             mybot.forward_message(chat_id=CONTRIBUTE, from_chat_id=message.chat.id, message_id=message.message_id)
+
 
 # Handler for "Contribute" button for fifth year
 @mybot.message_handler(func=lambda message: message.text == b4s2.contribute)
 def handle_contribute(message):
     mybot.send_message(message.chat.id, "Please send the file (pdf, doc, ppt) or link you want to contribute.")
 
+
 # Handler for documents
 @mybot.message_handler(content_types=['document'])
 def handle_document(message):
@@ -1218,13 +1403,13 @@ def handle_document(message):
     if file_extension in ['.pdf', '.doc', '.ppt', '.docx', '.pptx']:
         mybot.forward_message(chat_id=CONTRIBUTE, from_chat_id=message.chat.id, message_id=message.message_id)
 
+
 # Handler for links
 @mybot.message_handler(func=lambda message: message.entities is not None)
 def handle_links(message):
     for entity in message.entities:
         if entity.type == "url":
             mybot.forward_message(chat_id=CONTRIBUTE, from_chat_id=message.chat.id, message_id=message.message_id)
-
 
 
 if __name__ == '__main__':
